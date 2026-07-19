@@ -531,19 +531,23 @@ body::after {
 }
 .bento-projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 600px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 .bento-projects .card {
-  min-height: 140px;
-  aspect-ratio: 1 / 1;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 18px;
+  gap: 10px;
 }
 @media (max-width: 900px) {
-  .bento-projects { grid-template-columns: 1fr; }
-  .bento-projects .card { aspect-ratio: auto; }
+  .bento-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .bento-projects {
+    grid-template-columns: 1fr;
+  }
 }
